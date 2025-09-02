@@ -1,0 +1,10 @@
+com/darwinruiz/uspglocalgallerylab/repositories/IFileRepository.class
+com/darwinruiz/uspglocalgallerylab/controllers/ViewServlet.class
+com/darwinruiz/uspglocalgallerylab/util/ImageValidator.class
+com/darwinruiz/uspglocalgallerylab/controllers/DeleteServlet.class
+com/darwinruiz/uspglocalgallerylab/repositories/LocalFileRepository.class
+com/darwinruiz/uspglocalgallerylab/controllers/ListServlet.class
+com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.class
+com/darwinruiz/uspglocalgallerylab/util/NamePolicy.class
+com/darwinruiz/uspglocalgallerylab/dto/UploadResult.class
+com/darwinruiz/uspglocalgallerylab/services/ImageService.class
