@@ -3,7 +3,6 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Galería (Local)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -35,9 +34,7 @@
 <main class="container py-4">
 
     <%
-        // Atributos esperados desde ListServlet
         java.util.List<String> local = (java.util.List<String>) request.getAttribute("localImages");
-        Integer pageNum = (Integer) request.getAttribute("page");   // <-- usar pageNum para no chocar con 'page' implícito
         Integer pageSize = (Integer) request.getAttribute("size");
         Integer total = (Integer) request.getAttribute("total");
 
@@ -69,7 +66,6 @@
         Abre esta página desde <code><%=request.getContextPath()%>/list</code> para cargar el contenido.
     </div>
     <% } else if (local.isEmpty()) { %>
-    <div class="alert alert-warning">No hay imágenes aún. Sube algunas desde la pestaña <strong>Subir</strong>.</div>
     <% } else { %>
     <div class="row g-3">
         <% for (String path : local) { %>
@@ -77,9 +73,6 @@
             <div class="card shadow-sm">
                 <img class="thumb card-img-top"
                      src="<%=request.getContextPath()%>/view?path=<%=java.net.URLEncoder.encode(path, "UTF-8")%>"
-                     alt="Imagen">
-                <div class="card-body small text-truncate"><%=path%>
-                </div>
 
                 <div class="card-footer bg-white">
                     <form method="post" action="<%=request.getContextPath()%>/delete" class="d-inline">
