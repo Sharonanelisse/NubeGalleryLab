@@ -1,6 +1,7 @@
 package com.darwinruiz.uspglocalgallerylab.controllers;
 
 import com.darwinruiz.uspglocalgallerylab.repositories.LocalFileRepository;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -8,14 +9,15 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 
 @WebServlet("/view")
 public class ViewServlet extends HttpServlet {
     private LocalFileRepository repo;
 
     @Override
-    public void init() {
-        repo = LocalFileRepository.createDefault();
+    public void init() throws ServletException {
+        Path base = Path.of(System.getProperty("java.io.tmpdir"), "uspgtests");
     }
 
     @Override

@@ -3,14 +3,14 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Galería (Local)</title>
+    <title>Galería</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         .thumb {
             object-fit: cover;
-            height: 180px
+            height: 180px;
         }
     </style>
 </head>
@@ -33,67 +33,42 @@
 </nav>
 
 <main class="container py-4">
+    <h3 class="mb-3">Imágenes en S3</h3>
 
     <%
-        // Atributos esperados desde ListServlet
-        java.util.List<String> local = (java.util.List<String>) request.getAttribute("localImages");
-        Integer pageNum = (Integer) request.getAttribute("page");   // <-- usar pageNum para no chocar con 'page' implícito
-        Integer pageSize = (Integer) request.getAttribute("size");
-        Integer total = (Integer) request.getAttribute("total");
-
-        if (pageNum == null) pageNum = 1;
-        if (pageSize == null) pageSize = 12;
-        if (total == null) total = (local == null ? 0 : local.size());
-
-        int totalPages = (int) Math.ceil(total / (double) pageSize);
-        if (totalPages == 0) totalPages = 1;
-
-        int prev = Math.max(1, pageNum - 1);
-        int next = Math.min(totalPages, pageNum + 1);
+        // Obtener lista de imágenes S3
+        java.util.List<String> s3 = (java.util.List<String>) request.getAttribute("s3ImageUrls");
+        if (s3 == null) {
+    %>
+    <div class="alert alert-info">Haz clic en “Refrescar” para listar las imágenes.</div>
+    <%
+        }
     %>
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3 class="m-0">
-            Imágenes locales <small class="text-muted fs-6">(página <%=pageNum%>/<%=totalPages%>)</small>
-        </h3>
-        <div class="btn-group">
-            <a class="btn btn-sm btn-outline-secondary"
-               href="<%=request.getContextPath()%>/list?page=<%=prev%>&size=<%=pageSize%>">« Anterior</a>
-            <a class="btn btn-sm btn-outline-secondary"
-               href="<%=request.getContextPath()%>/list?page=<%=next%>&size=<%=pageSize%>">Siguiente »</a>
-        </div>
-    </div>
-
-    <% if (local == null) { %>
-    <div class="alert alert-info">
-        Abre esta página desde <code><%=request.getContextPath()%>/list</code> para cargar el contenido.
-    </div>
-    <% } else if (local.isEmpty()) { %>
-    <div class="alert alert-warning">No hay imágenes aún. Sube algunas desde la pestaña <strong>Subir</strong>.</div>
-    <% } else { %>
     <div class="row g-3">
-        <% for (String path : local) { %>
+        <%
+            if (s3 != null && !s3.isEmpty()) {
+                for (String url : s3) {
+        %>
         <div class="col-6 col-md-3">
             <div class="card shadow-sm">
-                <img class="thumb card-img-top"
-                     src="<%=request.getContextPath()%>/view?path=<%=java.net.URLEncoder.encode(path, "UTF-8")%>"
-                     alt="Imagen">
-                <div class="card-body small text-truncate"><%=path%>
+                <img class="thumb card-img-top" src="<%=url%>" alt="">
+                <div class="card-body small text-truncate">
+                    <%= url.substring(url.lastIndexOf("/") + 1) %>
                 </div>
-
-                <div class="card-footer bg-white">
-                    <form method="post" action="<%=request.getContextPath()%>/delete" class="d-inline">
-                        <input type="hidden" name="path" value="<%=path%>">
-                        <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i> Eliminar</button>
-                    </form>
-                </div>
-
             </div>
         </div>
-        <% } %>
+        <%
+            }
+        } else if (s3 != null) {
+        %>
+        <div class="col-12">
+            <div class="alert alert-warning">No hay imágenes en S3.</div>
+        </div>
+        <%
+            }
+        %>
     </div>
-    <% } %>
-
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,6 +1,6 @@
 package com.darwinruiz.uspglocalgallerylab.controllers;
 
-import com.darwinruiz.uspglocalgallerylab.repositories.LocalFileRepository;
+import com.darwinruiz.uspglocalgallerylab.storage.S3Storage;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,25 +10,25 @@ import java.io.IOException;
 
 @WebServlet("/delete")
 public class DeleteServlet extends HttpServlet {
-    private LocalFileRepository repo;
+    private S3Storage storage;
 
     @Override
     public void init() {
-        repo = LocalFileRepository.createDefault();
+        storage = new S3Storage();
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String rel = req.getParameter("path");
-        if (rel == null || rel.isBlank() || rel.contains("..")) {
+        String key = req.getParameter("path"); // aquí viene la key en S3
+        if (key == null || key.isBlank() || key.contains("..")) {
             resp.sendError(400, "path inválido");
             return;
         }
 
         try {
-            repo.delete(rel);
-        } catch (IOException e) {
-            resp.sendError(500, "Error al borrar: " + e.getMessage());
+            storage.delete(key);
+        } catch (Exception e) {
+            resp.sendError(500, "Error al borrar en S3: " + e.getMessage());
             return;
         }
 
@@ -41,7 +41,7 @@ public class DeleteServlet extends HttpServlet {
             if (page != null) redirect.append("page=").append(page).append("&");
             if (size != null) redirect.append("size=").append(size);
         }
-        // TODO-5: llamar repo.delete(rel) y redirigir a la página actual
-        resp.sendRedirect(req.getContextPath() + "/list");
+
+        resp.sendRedirect(redirect.toString());
     }
 }

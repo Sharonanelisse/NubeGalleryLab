@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edeaae48-b8ce-4c54-af4c-a4ec9fc28d7a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/config/AwsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/storage/S3Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/ListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/ListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/ViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/ViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/repositories/S3Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/gallery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gallery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/ListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/ListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/ViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/ViewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,21 +60,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sharonmarroquin/Programacion/IntelliJIDEA/NubeGalleryLab&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.UspgLocalGalleryLab [wildfly:deploy].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sharonmarroquin/Programacion/IntelliJIDEA/NubeGalleryLab",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="UspgLocalGalleryLab [wildfly:deploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="wildfly:deploy" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -20,7 +20,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/upload.jsp"><i
                         class="bi bi-upload"></i> Subir</a></li>
-                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/list"><i
+                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/gallery.jsp"><i
                         class="bi bi-image"></i> Imágenes</a></li>
             </ul>
         </div>
@@ -39,7 +39,7 @@
         </ul>
         <a class="btn btn-primary" href="<%=request.getContextPath()%>/upload.jsp"><i class="bi bi-upload"></i> Ir a
             Subir</a>
-        <a class="btn btn-outline-secondary" href="<%=request.getContextPath()%>/list"><i class="bi bi-image"></i> Ver
+        <a class="btn btn-outline-secondary" href="<%=request.getContextPath()%>/gallery.jsp"><i class="bi bi-image"></i> Ver
             galería</a>
     </div>
 </main>
