@@ -1,0 +1,19 @@
+# AWS / secretos
+.aws/
+.env
+*.env
+.secret.
+.local.
+*.credentials
+
+# Java / Maven
+target/
+*.class
+*.log
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
