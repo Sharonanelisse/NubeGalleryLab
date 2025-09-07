@@ -36,6 +36,7 @@
                 <div class="mb-3">
                     <label class="form-label">Imágenes</label>
                     <input class="form-control" type="file" name="file" accept="image/*" multiple required>
+                    <input type="hidden" name="target" value="s3">
                     <div class="form-text">
                         Formatos: PNG/JPG/JPEG/GIF/WEBP · Tamaño recomendado ≤ 3 MB por archivo.
                     </div>
