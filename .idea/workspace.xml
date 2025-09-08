@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="edeaae48-b8ce-4c54-af4c-a4ec9fc28d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/config/AwsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/config/AwsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/gallery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gallery.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UspgLocalGalleryLab/WEB-INF/classes/com/darwinruiz/uspglocalgallerylab/controllers/UploadServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +114,7 @@
       <workItem from="1757128020452" duration="598000" />
       <workItem from="1757168271236" duration="383000" />
       <workItem from="1757255690492" duration="967000" />
+      <workItem from="1757258370120" duration="2223000" />
     </task>
     <servers />
   </component>

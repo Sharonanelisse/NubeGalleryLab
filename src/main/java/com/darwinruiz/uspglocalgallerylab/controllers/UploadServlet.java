@@ -63,10 +63,10 @@ public class UploadServlet extends HttpServlet {
             try (InputStream in = part.getInputStream()) {
                 s3.put(key, in, part.getSize(), contentType); // en S3 no hay que crear carpetas
             }
-            resp.sendRedirect(req.getContextPath() + "/upload.jsp?ok=s3");
+            resp.sendRedirect(req.getContextPath() + "/list?uploaded=1&rejected=0");
             return;
         }
 
-        resp.sendRedirect(req.getContextPath() + "/upload.jsp?ok=local");
+        resp.sendRedirect(req.getContextPath() + "/list?type=images&uploaded=1&rejected=0");
     }
 }

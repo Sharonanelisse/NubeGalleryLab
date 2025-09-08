@@ -37,8 +37,8 @@
 
     <%
         // Obtener lista de imágenes S3
-        java.util.List<String> s3 = (java.util.List<String>) request.getAttribute("s3ImageUrls");
-        if (s3 == null) {
+        java.util.List<String> s3Urls = (java.util.List<String>) request.getAttribute("s3ImageUrls");;
+        if (s3Urls == null) {
     %>
     <div class="alert alert-info">Haz clic en “Refrescar” para listar las imágenes.</div>
     <%
@@ -47,8 +47,8 @@
 
     <div class="row g-3">
         <%
-            if (s3 != null && !s3.isEmpty()) {
-                for (String url : s3) {
+            if (s3Urls != null && !s3Urls.isEmpty()) {
+                for (String url : s3Urls) {
         %>
         <div class="col-6 col-md-3">
             <div class="card shadow-sm">
@@ -60,7 +60,7 @@
         </div>
         <%
             }
-        } else if (s3 != null) {
+        } else if (s3Urls != null) {
         %>
         <div class="col-12">
             <div class="alert alert-warning">No hay imágenes en S3.</div>
